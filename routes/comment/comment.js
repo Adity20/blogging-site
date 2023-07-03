@@ -1,15 +1,23 @@
-const express = require('express')
-
-const { createcommentCtrl, commentDetailsCtrl, deleteCommentCtrl, updateCommentCtrl }=require('../../controllers/comments/comments')
-
+const express = require("express");
+const {
+  createCommentCtrl,
+  commentDetailsCtrl,
+  deleteCommentCtrl,
+  updateCommentCtrl,
+} = require("../../controllers/comments/comments");
+const protected = require("../../middlewares/protected");
 const commentRoutes = express.Router();
 
-commentRoutes.post("comments",createcommentCtrl)
+//POST/api/v1/comments
+commentRoutes.post("/:id", protected, createCommentCtrl);
 
-commentRoutes.get("comments/:id",commentDetailsCtrl)
+//GET/api/v1/comments/:id
+commentRoutes.get("/:id", commentDetailsCtrl);
 
-commentRoutes.delete("comments/:id",deleteCommentCtrl)
-commentRoutes.put("comments/:id",updateCommentCtrl)
+//DELETE/api/v1/comments/:id
+commentRoutes.delete("/:id", protected, deleteCommentCtrl);
 
+//PUT/api/v1/comments/:id
+commentRoutes.put("/:id", protected, updateCommentCtrl);
 
-module.exports=commentRoutes
+module.exports = commentRoutes;
