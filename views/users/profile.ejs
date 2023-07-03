@@ -16,3 +16,29 @@
   </head>
   <body>
     <%-include('../partials/navbar.ejs') %>
+   <div class="profile-container">
+      <header
+        style="
+          background-image: url(https://cdn.pixabay.com/photo/2022/10/03/19/03/building-7496662_1280.jpg);
+        "
+      >
+        <div class="icons-container">
+          <p>
+            <i class="fas fa-user"></i>
+          </p>
+          <p>
+            <i class="fas fa-envelope"></i>
+          </p>
+          <p>
+            <i class="fas fa-lock"></i>
+          </p>
+          <p>
+            <i class="fas fa-sign-out-alt"></i>
+          </p>
+        </div>
+        <!-- upload cover image icon -->
+        <a href="/api/v1/users/cover-photo-upload">
+          <i class="fas fa-camera upload-btn"></i>
+        </a>
+
+      </header>
