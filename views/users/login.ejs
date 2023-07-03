@@ -17,3 +17,28 @@
   <body>
 
 <%-include('../partials/navbar.ejs') %>
+
+
+    <div class="form-container">
+      <!-- icon -->
+      <h1>Login Into Your Account</h1>
+      <p>
+        <!-- lock icon -->
+        <i class="fas fa-lock"></i>
+      </p>
+      <small class="error">
+        <i class="fas fa-exclamation-circle"></i>
+        <% error %>
+      </small>
+      <form action="/api/v1/users/login" method="POST">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" />
+
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+
+        <button type="submit">Login</button>
+
+        <p>Don't have an account? <a href="/register">Register</a></p>
+      </form>
+    </div>
