@@ -1,1 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+body {
+  background: #f1f1f1;
+  font-family: "Open Sans", sans-serif;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 500px;
+  background: #fff;
+  margin: 7% auto;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
