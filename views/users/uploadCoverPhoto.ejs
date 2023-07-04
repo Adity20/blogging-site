@@ -16,3 +16,21 @@
   </head>
   <body>
     <%-include('../partials/navbar.ejs') %>
+ <div class="form-container">
+      <!-- icon -->
+      <h1>Upload Cover photo</h1>
+      <p>
+        <!-- upload icon -->
+      </p>
+      <small class="error">
+        <i class="fas fa-exclamation-circle"></i>
+        Invalid Credentials
+      </small>
+      <form action="/login" method="POST">
+        <label for="email">Select Imgae</label>
+        <input type="file" name="image" id="image" />
+        <button type="submit">
+          <i class="fas fa-upload"></i>
+        </button>
+      </form>
+    </div>
