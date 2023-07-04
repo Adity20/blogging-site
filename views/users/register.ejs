@@ -18,3 +18,30 @@
 <!-- nav -->
 
       <%-include('../partials/navbar.ejs') %>
+  <div class="form-container">
+      <!-- icon -->
+      <h1>
+        Register
+        <i class="fas fa-user-plus"></i>
+      </h1>
+
+      <small class="error">
+        <i class="fas fa-exclamation-circle"></i>
+        <% error %>
+      </small>
+      <form action="/api/v1/users/register" method="POST">
+        <!-- full name -->
+        <label for="name">Full Name</label>
+        <input type="text" name="name" />
+        <!-- email -->
+        <label for="email">Email</label>
+        <input type="email" name="email"  />
+
+        <label for="password">Password</label>
+        <input type="password" name="password"  />
+
+        <button type="submit">Register</button>
+
+        <p>Already have an account? <a href="/api/v1/users/login">Login</a></p>
+      </form>
+    </div>
