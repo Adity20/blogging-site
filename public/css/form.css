@@ -74,3 +74,25 @@ body {
   margin-top: 20px;
   padding: 0 20px;
 }
+.form-container button:hover {
+  background: #fb8500;
+  transform: scale(1.05);
+
+  transition: 0.5s;
+}
+
+.form-container button:active {
+  background: #023047;
+  transform: scale(1);
+}
+
+.form-container a {
+  color: #333;
+  text-decoration: none;
+}
+
+.no-account-link {
+  text-align: center;
+  margin-top: 20px;
+  color: indigo;
+}
