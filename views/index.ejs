@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fontawesome -->
+    <script
+      src="https://kit.fontawesome.com/42a182743f.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans&family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <title>Responsive design</title>
+  </head>
+  <body>
+
+<!-- nav -->
+
+  <%-include('./partials/navbar.ejs') %>
+
+ <!-- header -->
+    <header>
+      <div class="header-content">
+        <h1>Capturing Moments, Sharing Stories</h1>
+        <p>
+          Explore, Engage, Evolve: Your Journey Begins Here
+        </p>
+        <a href="#">
+          <span>Create New Post</span>
+        </a>
+      </div>
+    </header>
+
+ <!-- Latest post title -->
+
+    <div class="latest-post-title">
+      <!-- Icon -->
+      <div class="icon">
+        <i class="fas fa-book-open"></i>
+      </div>
+      <h1>Latest Posts (20)</h1>
+      <p>
+      </p>
+    </div>
+
+ <!-- content -->
+    <section class="container-flex">
+        <article class="post-content">
+          
+          <img src="./images/post3.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">John Doe</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">January 1, 2020</time>
+            </span>
+          </p><h1 class="post-title">Become a Web Developer</h1>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+ <!-- category -->
+          <div class="post-category">
+            <span>Category:</span>
+          </div>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </article>
+
+        <article class="post-content">
+          
+          <img src="./images/post7.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">John Doe</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">January 1, 2020</time>
+            </span>
+          </p><h1 class="post-title">How to Take care of Cat</h1>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+
+   <article class="post-content">
+          
+          <img src="./images/post7.jpg" alt="" class="post-image" />
+          <p class="post-info">
+            <span class="post-author">
+              <i class="fas fa-user"></i>
+              <a href="#">John Doe</a>
+            </span>
+            <span class="post-date">
+              <i class="far fa-calendar-alt"></i>
+              <time datetime="2020-01-01">January 1, 2020</time>
+            </span>
+          </p>
+          <h1 class="post-title">How to Take care of Cat</h1>
+          <p class="post-body">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia
+            itaque inventore culpa placeat! Cum nam optio, labore, voluptas sunt
+            quam rem cupiditate laboriosam amet reiciendis velit doloribus eum!
+            Repudiandae, odio?
+          </p>
+          <!-- category -->
+          <div class="post-category">
+            <span>Category:</span>
+            
+          </div>
+          <a href="/" class="post-read-more">Continue Reading...</a>
+        </article>
+ </section>
+    <!-- footer -->
+  <%-include('./partials/footer.ejs') %>
+
+  </body>
+</html>

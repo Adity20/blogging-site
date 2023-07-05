@@ -1,14 +1,34 @@
-const express = require('express')
-const { createPostCtrl, fetchPostCtrl, fetchPostsCtrl, deletePostCtrl, updatePostCtrl }=require('../../controllers/posts/posts')
+const express = require("express");
+const multer = require("multer");
+const storage = require("../../config/cloudinary");
 
+const {
+  createPostCtrl,
+  deletePostCtrl,
+  fetchPostCtrl,
+  fetchPostsCtrl,
+  updatepostCtrl,
+} = require("../../controllers/posts/posts");
 const postRoutes = express.Router();
+const protected = require("../../middlewares/protected");
 
-postRoutes.post("posts",createPostCtrl)
-postRoutes.get("posts",fetchPostCtrl)
-postRoutes.get("posts/:id",fetchPostsCtrl)
+//instance of multer
+const upload = multer({
+  storage,
+});
+//POST/api/v1/posts
+postRoutes.post("/", protected, upload.single("file"), createPostCtrl);
 
-postRoutes.delete("posts/:id",deletePostCtrl)
-postRoutes.put("posts/:id",updatePostCtrl)
+//GET/api/v1/posts
+postRoutes.get("/", fetchPostsCtrl);
 
+//GET/api/v1/posts/:id
+postRoutes.get("/:id", fetchPostCtrl);
 
-module.exports=postRoutes
+//DELETE/api/v1/posts/:id
+postRoutes.delete("/:id", protected, deletePostCtrl);
+
+//PUT/api/v1/posts/:id
+postRoutes.put("/:id", protected, upload.single("file"), updatepostCtrl);
+
+module.exports = postRoutes;
